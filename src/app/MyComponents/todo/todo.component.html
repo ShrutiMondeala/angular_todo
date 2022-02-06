@@ -1,0 +1,17 @@
+<div class="container">
+    <h1 class="text-center mb-3"> My To do list</h1>
+    <div class="my-3">
+        <h4>New To Do</h4>
+        <app-addtodo  (todoAdd)="additem($event)"></app-addtodo>
+    
+    </div>
+    
+    <div class="my-3">
+    <h4>Your Todos</h4>
+    <div *ngFor="let x of todos ">
+        <app-todoitems [todo]="x" (todoDelete)="deleteitem($event)" (todoCheck)="toggelitem($event)"></app-todoitems>
+    </div>
+    </div>
+</div>
+
+
